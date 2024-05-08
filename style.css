@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+  }
+  
+  .page {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+  }
+  
+  #back {
+    transform: rotateY(180deg);
+  }
+  
+  .container:hover #front {
+    transform: rotateY(-180deg);
+  }
+  
+  .container:hover #back {
+    transform: rotateY(0deg);
+  }
+  
